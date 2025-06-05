@@ -33,7 +33,7 @@ class PosPrediction:
         self.sess.run(tfv1.global_variables_initializer())
 
         # Attempt to restore pretrained weights
-        prn_path = os.path.join('/kaggle/working/', 'Data/net-data/256_256_resfcn256_weight')
+        prn_path = os.path.join('/kaggle/working/PRNet', 'Data/net-data/256_256_resfcn256_weight')
         if not os.path.isfile(prn_path + '.index'):
             print(f"Warning: Checkpoint not found at {prn_path}.index. Using initialized weights.")
         else:
